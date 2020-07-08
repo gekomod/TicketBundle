@@ -1,0 +1,35 @@
+{
+    "name": "gekomod/ticket-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony Gekomod/TicketBundle",
+    "keywords": [
+        "settings",
+        "block",
+        "cms"
+    ],
+    "homepage": "https://webpi.pl",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jarek",
+            "email": "admin@webpi.pl",
+            "homepage": "https://webpi.pl"
+        },
+        {
+            "name": "Webpi.pl",
+            "homepage": "https://github.com/gekomod/settingsbundle/contributors"
+        }
+    ],
+    "require": {
+        "php": "^7.0 || ^7.4",
+        "sonata-project/admin-bundle": "^3.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Gekomod\\TicketBundle\\": "/"
+        }
+    }
+}
