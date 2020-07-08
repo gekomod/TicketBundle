@@ -96,13 +96,14 @@ class Ticket
     private $content;
 
     /**
-     * @var integer
-     *
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="tickets")
+     * @ORM\ManyToOne(
+     *       targetEntity="Category", inversedBy="tickets", 
+     *       cascade={"persist"}
+     * ) 
      * @ORM\JoinColumn(name="category", referencedColumnName="id")
      */
     protected $category;
-
+    
     /**
      * @var integer
      *
@@ -121,9 +122,10 @@ class Ticket
 
 
     /**
-     * @var integer
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="user_tickets")
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     * @ORM\ManyToOne(
+     *       targetEntity="App\Application\Sonata\UserBundle\Entity\User", 
+     *       cascade={"persist"}
+     * ) 
      */
     protected $user;
 
@@ -240,11 +242,11 @@ class Ticket
     /**
      * Set user
      *
-     * @param \Gekomod\TicketBundle\Entity\User $user
+     * @param \App\Application\Sonata\UserBundle\Entity\User $user
      *
      * @return Ticket
      */
-    public function setUser(\Gekomod\TicketBundle\Entity\User $user = null)
+    public function setUser(\App\Application\Sonata\UserBundle\Entity\User $user = null)
     {
         $this->user = $user;
 
@@ -254,7 +256,7 @@ class Ticket
     /**
      * Get user
      *
-     * @return \Gekomod\TicketBundle\Entity\User
+     * @return \App\Application\Sonata\UserBundle\Entity\User
      */
     public function getUser()
     {

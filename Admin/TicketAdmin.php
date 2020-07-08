@@ -45,6 +45,7 @@ final class TicketAdmin extends AbstractAdmin
      	$formMapper
             ->add('title')
             ->add('category')
+            ->add('content')
             ->add('priority')
             ->add('is_solved')
             ->add('user')

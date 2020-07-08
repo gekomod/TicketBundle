@@ -1,0 +1,7 @@
+services:
+    admin.gekomod.ticket:
+        class: Gekomod\TicketBundle\Admin\TicketAdmin
+        arguments: [~, Gekomod\TicketBundle\Entity\Ticket, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Pomoc, label: Ticket }
+        public: true
